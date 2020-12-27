@@ -1,0 +1,24 @@
+# Object
+
+# class keyword followed by name of class
+class NameOfClass():
+# class attribute have the same value across all instances
+    class_attribute = 'value'
+# __init__ method sets the initial state of your object
+# first parameter self helps define initial object
+    def __init__(self, attr1, attr2):
+# creates an attribute and sets its value 
+        self.attr1 = attr1
+        self.attr2 = attr2
+# instance methods are functions defined in the class and can 
+# only be called from an instance of that class
+    def method(self):
+        #code
+    
+    @classmethod
+    def cls_method(cls, attr1, attr2):
+        #code
+    
+    @staticmethod
+    def stc_method(attr1, attr2):
+        #code
