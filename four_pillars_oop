@@ -1,0 +1,14 @@
+4 Pillars of OOP
+
+-Polymorphism: the ability to reuse and redefine the same method throughout multiple
+               classes.
+
+-Inheritance: the ability to define a class that inherits the methodds and properties
+              from another class.
+              Parent Class ---> Child Class
+
+-Abstraction: the concept where the user is kept unaware of what goes on in the
+              implementation the function property.
+
+-Encapsulation: the concept of capturing the data and methods that work together
+                within one unit.

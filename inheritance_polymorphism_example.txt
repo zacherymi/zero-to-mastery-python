@@ -1,10 +1,10 @@
-# demonstrating object inheritance 
+# demonstrating object inheritance & polymorphism
 
-#abstracting away the log in class
+# abstracting away the log in class
 class User():
     def sign_in(self):
         print('logged in')
-#User class is as a parameter to the Wizard class and inherited
+# User class is as a parameter to the Wizard class and inherited
 class Wizard(User):
     def __init__(self, name, magic_style):
         self.name = name
@@ -27,5 +27,9 @@ wizard1.attack()
 rogue1.attack()
 
 print(isinstance(wizard1, Wizard))
-#evaluates as true | wizard class is a sub class of the user class
+# evaluates as true | wizard class is a sub class of the user class
 print(isinstance(wizard1, User))
+# polymorphism | .attack method can act differently depending on 
+# what obj calls them | two different outputs
+for char in [wizard1, rogue1]:
+    char.attack()
