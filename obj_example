@@ -40,3 +40,6 @@ print(isinstance(wizard1, User))
 for char in [wizard1, rogue1]:
     char.attack()
 
+# dir() prints methods available
+print(dir(wizard1))
+
