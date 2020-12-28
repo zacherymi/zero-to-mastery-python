@@ -2,26 +2,32 @@
 
 # abstracting away the log in class
 class User():
+    def __init__(self, clan, email):
+        self.clan = clan
+        self.email = email
     def sign_in(self):
         print('logged in')
 # User class is as a parameter to the Wizard class and inherited
 class Wizard(User):
-    def __init__(self, name, magic_style):
-        self.name = name
+    def __init__(self, name, magic_style, clan, email):
+# super method
+        super().__init__(clan, email)
         self.magic_style = magic_style
+        
     def attack(self):
         print(f'attacking with the power of {self.magic_style}.')
 
 class Rogue(User):
-    def __init__(self, name, type_arrow):
+    def __init__(self, name, type_arrow, clan, email):
+        super().__init__(clan, email)
         self.name = name
         self.type_arrow = type_arrow
 
     def attack(self):
         print(f'attacking with {self.type_arrow} arrows.')
 
-wizard1 = Wizard('Romanov', 'frost')
-rogue1 = Rogue('Sly Cooper', 'thieving')
+wizard1 = Wizard('Romanov', 'frost', 'Alliance', 'romanov@spells.com' )
+rogue1 = Rogue('Sly Cooper', 'thieving', 'Horde', 'trashpanda@yahoo.com')
 
 wizard1.attack()
 rogue1.attack()
@@ -33,3 +39,4 @@ print(isinstance(wizard1, User))
 # what obj calls them | two different outputs
 for char in [wizard1, rogue1]:
     char.attack()
+
