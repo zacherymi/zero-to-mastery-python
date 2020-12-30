@@ -13,3 +13,4 @@ def get_oldest_cat(*args):
     return max(args)
 
 print(f'The oldest cat is {get_oldest_cat(cudi.age, ramone.age,tom.age)} years old')
+

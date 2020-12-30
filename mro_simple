@@ -1,0 +1,19 @@
+# simple method resolution order
+class A:
+    num = 10
+class B(A):
+    pass
+class C(A):
+    num = 1
+class D(B, C):
+    pass
+
+print(D.mro())
+
+#     4.A
+#   /    \
+# /       \
+#2.B      3.C     B & C inherit from A
+# \      /
+#  \   /
+#   1.D

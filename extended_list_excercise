@@ -1,0 +1,11 @@
+# simple list object functionality with Bart Simpson
+class SuperList(list):
+    def __len__(self):
+        return 1000
+
+super_list1 = SuperList();
+for i in range(1000):
+    super_list1.append('The Giving Tree isn\'t a chump')
+print(len(super_list1))
+print(super_list1[50])
+
